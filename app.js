@@ -19,5 +19,5 @@ function Claim(name, type, cost){
 }
 
 //function to determine percent covered
-
+//adding some changes to check my github abilities (which are in doubt)
 //function to determine amount covered
