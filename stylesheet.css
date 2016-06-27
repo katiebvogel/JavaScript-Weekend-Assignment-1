@@ -1,0 +1,13 @@
+body {
+  display: bold;
+  color: blue;
+}
+body p {
+  color: black;
+  margin-left: 20px;
+  margin-right: 200px;
+}
+
+li {
+  font-size: 32px;
+}

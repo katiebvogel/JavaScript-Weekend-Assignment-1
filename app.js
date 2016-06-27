@@ -1,3 +1,5 @@
+// $(document).ready(function(){
+
 var claim1 = new Claim("John Doe", "Specialist", 1100);
 
 var claim2 = new Claim("Jane Doe", "Optical", 100);
@@ -80,6 +82,8 @@ function amountCovered(i){
 
 //function that will print out entire list of information for all claims
 //and calculates total amount paid to ALL claims in the list
+var amount = 0;
+$(document).ready(function(){
 function allClaims(initialList) {
 var amount = 0;
 	for (i = 0; i < initialList.length; i++){
@@ -90,14 +94,20 @@ var amount = 0;
 			// var amount = 0;
 				amount += Math.round(totalCost*percent);
 
-				console.log("The total amount paid for claim" + (i + 1) + " is $" + amount + ".");
-
-				console.log("Paid out $" + amount + " for " + name + ".");
+				// console.log("The total amount paid for claim" + (i + 1) + " is $" + amount + ".");
+				//
+				// console.log("Paid out $" + amount + " for " + name + ".");
+				// $(document).ready(function(){
+				    $("h2 p").append("The total amount paid for claim" + (i + 1) + " is $" + amount + ". Paid out $" + amount + " for " + name + ".");
+				// })
 				return amount;
 			}
 
 	}
 }
+
+})
+
 
 //Here is a for loop that will run through all the claims in the list and
 //find a final total amount paid to all claims
@@ -106,3 +116,16 @@ for (i = 0; i < initialList.length; i ++) {
 	totalPayedOut += amountCovered(i);
 }
 	console.log("The total paid for all claims is: $" + totalPayedOut + ".");
+
+
+//Trying to see if the same js function can be appended to the DOM
+// rather than just logged into the console
+
+
+$(document).ready(function(){
+    $("ul li:first").append("Total paid for all claims: " + totalPayedOut + ".");
+// })
+//
+// $(document).ready(function(){
+    $("h2 p").append("The total amount paid for claim" + (i + 1) + " is $" + amount + ". Paid out $" + amount + " for " + name + ".");
+})
