@@ -1,4 +1,4 @@
-// $(document).ready(function(){
+$(document).ready(function(){
 
 var claim1 = new Claim("John Doe", "Specialist", 1100);
 
@@ -24,11 +24,11 @@ var claim6 = new Claim("Katie Vogel", "Primary Care", 5000);
 
 var claim7 = new Claim("John Arends", "Optical", 250);
 
-var claim8 = new Claim("Nora Schull", "Specialist", 700);
+var claim8 = new Claim("Nora Schull", "Specialist", 741.5);
 
-var claim9 = new Claim("Margaret Selva", "Emergency", 1200);
+var claim9 = new Claim("Margaret Selva", "Emergency", 999);
 
-var claim10 = new Claim("Jessica Arends", "Primary Care", 450);
+var claim10 = new Claim("Jessica Arends", "Primary Care", 457);
 
 
 
@@ -83,7 +83,7 @@ function amountCovered(i){
 //function that will print out entire list of information for all claims
 //and calculates total amount paid to ALL claims in the list
 var amount = 0;
-$(document).ready(function(){
+
 function allClaims(initialList) {
 var amount = 0;
 	for (i = 0; i < initialList.length; i++){
@@ -106,7 +106,7 @@ var amount = 0;
 	}
 }
 
-})
+
 
 
 //Here is a for loop that will run through all the claims in the list and
@@ -122,10 +122,8 @@ for (i = 0; i < initialList.length; i ++) {
 // rather than just logged into the console
 
 
-$(document).ready(function(){
-    $("ul li:first").append("Total paid for all claims: " + totalPayedOut + ".");
-// })
+    $("footer").append("Total paid for all claims: " + totalPayedOut + ".");
+});
 //
 // $(document).ready(function(){
-    $("h2 p").append("The total amount paid for claim" + (i + 1) + " is $" + amount + ". Paid out $" + amount + " for " + name + ".");
-})
+    // $("footer").append("The total amount paid for claim" + (i + 1) + " is $" + amount + ". Paid out $" + amount + " for " + name + ".");
